@@ -6,7 +6,7 @@ import _ from 'lodash';
 export const fetchPostsAndUsers = () => async (dispatch, getState) => {
     console.log("Awaiting to fetch posts");
     await dispatch(fetchPosts());   //dispatching manually------calling action creator from inside of another action creator
-    console.log("fetched posts");
+    console.log("fetched posts details");
 
 
       const userIds=_.uniq(_.map(getState().posts,'userId'));//gives unique userID
